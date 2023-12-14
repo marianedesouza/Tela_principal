@@ -1,0 +1,72 @@
+﻿// App.js
+
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import TelaPrincipal from './TelaPrincipal';
+import OutraTela from './OutraTela';
+
+
+const App = () => {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Principal</Link>
+            </li>
+            <li>
+              <Link to="/outra-tela">Outra Tela</Link>
+            </li>
+          </ul>
+        </nav>
+
+
+        <hr />
+
+
+        {/* Definindo as rotas para os componentes */}
+        <Route path="/" exact component={TelaPrincipal} />
+        <Route path="/outra-tela" component={OutraTela} />
+      </div>
+    </Router>
+  );
+};
+
+
+export default App;
+// TelaPrincipal.js
+
+
+import React from 'react';
+
+
+const TelaPrincipal = () => {
+  return (
+    <div>
+      <h2>Tela Principal</h2>
+      {/* Conteúdo da Tela Principal */}
+    </div>
+  );
+};
+
+
+export default TelaPrincipal;
+// OutraTela.js
+
+
+import React from 'react';
+
+
+const OutraTela = () => {
+  return (
+    <div>
+      <h2>Outra Tela</h2>
+      {/* Conteúdo da Outra Tela */}
+    </div>
+  );
+};
+
+
+export default OutraTela;
